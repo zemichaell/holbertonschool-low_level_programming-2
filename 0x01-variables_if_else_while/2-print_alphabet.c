@@ -12,7 +12,7 @@ int main(void)
 int l = 'A';
 while (l <= 'Z')
 {
-putchar(tolower(ch));
+putchar(tolower(l));
 l += 1;
 }
 putchar('\n');
