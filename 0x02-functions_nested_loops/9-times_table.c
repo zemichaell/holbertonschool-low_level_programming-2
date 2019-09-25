@@ -18,21 +18,22 @@ void times_table(void)
 			mult = (row * col);
 			if (mult < 10)
 			{
+				if (col != 0)
+			        {
+					_putchar(' ');
+					_putchar(' ');
+				}
 				_putchar(mult + '0');
 			}
 			else
 			{
+				_putchar(' ');
 				_putchar((mult / 10) + '0');
 				_putchar((mult % 10) + '0');
 			}
 			if (col != 9)
-			{
 				_putchar(',');
-				_putchar(' ');
-				if (mult < 10)
-					_putchar(' ');
-			}
-		}
+     		}
 		_putchar('\n');
 	}
 }
