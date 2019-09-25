@@ -19,7 +19,7 @@ void times_table(void)
 			if (mult < 10)
 			{
 				if (col != 0)
-			        {
+				{
 					_putchar(' ');
 					_putchar(' ');
 				}
@@ -33,7 +33,7 @@ void times_table(void)
 			}
 			if (col != 9)
 				_putchar(',');
-     		}
+		}
 		_putchar('\n');
 	}
 }
