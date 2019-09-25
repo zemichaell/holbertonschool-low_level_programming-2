@@ -18,19 +18,19 @@ void times_table(void)
 			mult = (row * col);
 			if (mult < 10)
 			{
-				_putchar(32);
-				_putchar(32);
+				_putchar(' ');
+				_putchar(' ');
 				_putchar(mult + '0');
 			}
 			else
 			{
-				_putchar(32);
+				_putchar(' ');
 				_putchar((mult / 10) + '0');
 				_putchar((mult % 10) + '0');
 			}
 			if (col != 9)
 				_putchar(',');
 		}
-		_putchar(10);
+		_putchar('\n');
 	}
 }
