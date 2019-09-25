@@ -16,7 +16,7 @@ void times_table(void)
 		for (col = 0; col < 10; col++)
 		{
 			mult = (row * col);
-			if (mult >= 0 && mult < 10)
+			if (mult < 10)
 			{
 				_putchar(mult + '0');
 				if (col != 9)
@@ -26,7 +26,7 @@ void times_table(void)
 					_putchar(32);
 				}
 			}
-			else if (mult > 9 && mult < 82)
+			else if (mult > 9)
 			{
 				_putchar((mult / 10) + '0');
 				_putchar((mult % 10) + '0');
