@@ -19,6 +19,14 @@ int _sqrt_recursion(int n)
 	return (getNumSqr(n, 1));
 }
 
+/**
+ * getNumSqr - function that gets de num of sqroot
+ *
+ * @num: input number
+ * @i: Counter variable
+ * Return: int
+ */
+
 int getNumSqr(int num, int i)
 {
 	if (num == (i * i))
