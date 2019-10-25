@@ -1,0 +1,11 @@
+*.pdf
+*.pyc
+*.tar
+*.tgz
+*.bz2
+*.cnf
+*.cfg
+*.log
+*~
+*main.c
+*.json
