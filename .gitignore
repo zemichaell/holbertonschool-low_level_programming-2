@@ -9,3 +9,8 @@
 *~
 *main.c
 *.json
+# Executables
+*.exe
+*.out
+*.app
+*.o
