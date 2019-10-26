@@ -19,13 +19,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		aux = va_arg(arguments, int);
-		if (separator == 0)
-			printf("%d", aux);
-		if (i == n - 1)
-			printf("%d", aux);
-		else
+		if (i < (n - 1) && separator != 0)
 			printf("%d%s", aux, separator);
+		else
+			printf("%d", aux);
 	}
-	printf("\n");
 	va_end(arguments);
+	printf("\n");
 }
