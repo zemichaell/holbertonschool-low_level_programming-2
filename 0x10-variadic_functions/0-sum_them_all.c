@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * sum_them_all - sum all arguements
- * @n: number of arguements
- * Return: 0 is n is 0 or return sum
+ * sum_them_all - function that returns the sum of all its parameters
+ * @n: number of parameters
+ * Return: Sum of all parameters
  */
 
 int sum_them_all(const unsigned int n, ...)
@@ -18,9 +18,7 @@ int sum_them_all(const unsigned int n, ...)
 	sum = 0;
 	va_start(numbers, n);
 	for (i = 0; i < n; i++)
-	{
 		sum += va_arg(numbers, int);
-	}
 	va_end(numbers);
 	return (sum);
 }
