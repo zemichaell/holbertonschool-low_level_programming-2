@@ -33,20 +33,17 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 		_putchar('0');
-	else
+	while (exp >= 0)
 	{
-		while (exp >= 0)
+		res_pow = _pow_recursion(2, exp);
+		if (n >= res_pow)
 		{
-			res_pow = _pow_recursion(2, exp);
-			if (n >= res_pow)
-			{
-				_putchar('1');
-				n -= res_pow;
-				flag = 1;
-			}
-			else if (n < res_pow && flag == 1)
-				_putchar('0');
-			exp--;
+			_putchar('1');
+			n -= res_pow;
+			flag = 1;
 		}
+		else if (n < res_pow && flag == 1)
+			_putchar('0');
+		exp--;
 	}
 }
