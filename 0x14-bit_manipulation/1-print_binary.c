@@ -32,9 +32,7 @@ void print_binary(unsigned long int n)
 	int flag = 0;
 
 	if (n == 0)
-		printf("%lu", n);
-	else if (n == 1)
-		printf("%lu", n);
+		_putchar('0');
 	else
 	{
 		while (exp >= 0)
@@ -42,12 +40,12 @@ void print_binary(unsigned long int n)
 			res_pow = _pow_recursion(2, exp);
 			if (n >= res_pow)
 			{
-				printf("1");
+				_putchar('1');
 				n -= res_pow;
 				flag = 1;
 			}
 			else if (n < res_pow && flag == 1)
-				printf("0");
+				_putchar('0');
 			exp--;
 		}
 	}
