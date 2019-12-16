@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * insert_dnodeint_at_index - function that inserts a new node at given position
+ * insert_dnodeint_at_index - inserts a new node at given position
  * @h: head of the node
  * @idx: index where to place node
  * @n: data for the node
@@ -24,7 +24,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_node->next = NULL;
 	new_node->prev = NULL;
 	if (idx == 0)
-		return (add_dnodeint(h, n));
+	{
+		new_node->prev = NULL, new_node->next = *h;
+		if (*h)
+			(*h)->prev = new_node;
+		*h = new_node;
+		return (new_node);
+	}
 	while (tmp != NULL && cont <= idx)
 	{
 		if (cont == idx)
