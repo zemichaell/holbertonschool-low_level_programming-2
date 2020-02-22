@@ -9,6 +9,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 all: $(NAME)
 
 $(NAME): m.h $(OBJ)
+# $@: replace by objective name
 	$(CC) $(OBJ) -o $@
 
 clean:
